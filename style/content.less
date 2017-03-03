@@ -4,18 +4,19 @@ body {
   display: flex;
   flex-direction: column;
   background-color: @colorSpace;
+  font-family: 'Alegreya Sans', sans-serif;
 }
 
-nav {
+.navOne {
   width: 100%;
-  background-color: @colorNav;
+  background-image:linear-gradient(to bottom , rgba(77,108,173,0.8), rgba(69,92,157,1));
   height: 45px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
   .search{
-    background-color: @colorNav;
+
     width: 320px;
     height: @navContentHeight;
     margin-left: 80px;
@@ -27,20 +28,23 @@ nav {
     background-size:30px,10px;
     flex-shrink: 0;
 
+
     input {
       width: 250px;
       height: 18px;
       border-radius: 20px;
       padding-left: 5px;
-      background-image:url(../img/search.png);
-      background-position:98% 50%;
-      background-repeat:no-repeat;
-      background-size:13px;
+      background-image:linear-gradient(to bottom , rgba(149,149,149,0.3), rgba(255,255,255,0.7)),url(../img/search.png);
+      background-position: 50% 50% ,98% 50%;
+      background-repeat:no-repeat,no-repeat;
+      background-size:100% 100%,13px;
+
       &:focus {
         background-image: none;
         outline: none;
       }
     }
+
   }
   .action {
 
@@ -52,7 +56,7 @@ nav {
     display: flex;
 
     .actionA {
-      background-color: @colorNav;
+
       height: @navContentHeight;
       flex-grow: 1;
       color: white;
@@ -60,7 +64,7 @@ nav {
     }
 
     .actionB{
-      background-color: @colorNav;
+
       height: @navContentHeight;
       width: 100px;
       flex-shrink: 0;
@@ -96,7 +100,7 @@ nav {
 
 section {
   min-height: 85vh;
-  width: 65%;
+  width: 888px;
   flex-grow: 1;
   background-color: @colorSpace;
   display: flex;
@@ -110,7 +114,7 @@ section {
     display: flex;
     flex-direction: column;
 
-    nav{
+    .navSecond{
       background-color: @colorContain;
       width: 600px;
       height: @navInsideContentHeight;
@@ -118,6 +122,7 @@ section {
       margin: 0 30px 15px 0;
       display: flex;
       flex-shrink: 0;
+
 
       #plus {
         background-color: @colorSpace;
@@ -139,6 +144,7 @@ section {
         flex-grow: 1;
         height: 100%;
         position: relative;
+        box-shadow: 2px 2px 5px @colorBorder;
 
         &::after {
           content: "";
@@ -149,6 +155,7 @@ section {
           border-width: 12px;
           border-style: solid;
           border-color: transparent @colorContain transparent transparent;
+
         }
 
         ul {
@@ -261,6 +268,7 @@ section {
         align-items: flex-start;
         box-sizing: border-box;
         background-color: @colorContain;
+        box-shadow: 2px 2px 5px @colorBorder;
 
         .informationText{
           border-bottom: 1px solid @colorBorder;
@@ -269,6 +277,7 @@ section {
           margin: auto;
           font-size: 13px;
           position: relative;
+
 
           h3 {
             margin: 10px 0 0px 0;
@@ -389,10 +398,17 @@ section {
               height: 14px;
               border-radius: 20px;
               padding-left: 5px;
-              background-image:url(../img/pen2.png);
-              background-position:98% 50%;
-              background-repeat:no-repeat;
-              background-size:13px;
+
+              background-image:linear-gradient(to bottom , rgba(149,149,149,0.3), rgba(255,255,255,0.7)),url(../img/pen2.png);
+              background-position: 50% 50% ,98% 50%;
+              background-repeat:no-repeat,no-repeat;
+              background-size:100% 100%,13px;
+              border: 1px solid @colorBorder;
+
+
+
+
+
 
               &:focus {
                 background-image: none;
@@ -494,6 +510,7 @@ section {
         background-color: @colorContain;
         margin-top: 10px;
         padding-top: 10px;
+        box-shadow: 2px 2px 5px @colorBorder;
 
         &:first-child {
           margin-top: 0px;
@@ -542,12 +559,15 @@ section {
         margin: 0;
         padding: 0;
         list-style-type: none;
+        box-shadow: 2px 2px 5px @colorBorder;
 
         li {
           height: 25px;
           background-color: @colorContain;
           box-sizing: border-box;
-          line-height: 25px;
+
+
+
           font-size: 12px;
           display: flex;
           justify-content: space-between;
@@ -557,19 +577,31 @@ section {
             cursor: pointer;
           }
 
+
+
+          .dop {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+            overflow: hidden;
+
           img[src$=".jpg"] {
             height: 23px;
             border-radius: 10px;
-            margin:2px 0 0 5px;
           }
 
           span.name {
-            width: 80px;
+            margin-left: 5px;
+            line-height: 25px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            margin-left: -45px;
+            }
           }
+
+
+
+
 
           span.current{
             width: 45px;

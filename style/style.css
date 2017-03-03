@@ -4,17 +4,17 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #E6E7EF;
+  font-family: 'Alegreya Sans', sans-serif;
 }
-nav {
+.navOne {
   width: 100%;
-  background-color: #3D5C9D;
+  background-image: linear-gradient(to bottom, rgba(77, 108, 173, 0.8), #455c9d);
   height: 45px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-nav .search {
-  background-color: #3D5C9D;
+.navOne .search {
   width: 320px;
   height: 30px;
   margin-left: 80px;
@@ -26,21 +26,21 @@ nav .search {
   background-size: 30px,10px;
   flex-shrink: 0;
 }
-nav .search input {
+.navOne .search input {
   width: 250px;
   height: 18px;
   border-radius: 20px;
   padding-left: 5px;
-  background-image: url(../img/search.png);
-  background-position: 98% 50%;
-  background-repeat: no-repeat;
-  background-size: 13px;
+  background-image: linear-gradient(to bottom, rgba(149, 149, 149, 0.3), rgba(255, 255, 255, 0.7)), url(../img/search.png);
+  background-position: 50% 50% ,98% 50%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%,13px;
 }
-nav .search input:focus {
+.navOne .search input:focus {
   background-image: none;
   outline: none;
 }
-nav .action {
+.navOne .action {
   width: 200px;
   height: 30px;
   margin-right: 80px;
@@ -48,15 +48,13 @@ nav .action {
   flex-shrink: 0;
   display: flex;
 }
-nav .action .actionA {
-  background-color: #3D5C9D;
+.navOne .action .actionA {
   height: 30px;
   flex-grow: 1;
   color: white;
   text-align: center;
 }
-nav .action .actionB {
-  background-color: #3D5C9D;
+.navOne .action .actionB {
   height: 30px;
   width: 100px;
   flex-shrink: 0;
@@ -64,29 +62,29 @@ nav .action .actionB {
   text-align: center;
   line-height: 30px;
 }
-nav .action .actionB img[src$="1.jpg"] {
+.navOne .action .actionB img[src$="1.jpg"] {
   height: 30px;
   border-radius: 10px;
   margin: 0 10px 0 10px;
 }
-nav .action .actionB a {
+.navOne .action .actionB a {
   display: inline-block;
   height: 30px;
   border-radius: 12px;
   box-shadow: 0px 2px 1px #2B2B2B;
 }
-nav .action .actionB a:active {
+.navOne .action .actionB a:active {
   box-shadow: 0px 3px 4px black;
 }
-nav .action .actionB a:hover {
+.navOne .action .actionB a:hover {
   cursor: pointer;
 }
-nav .action .actionB a img[src$="down.png"] {
+.navOne .action .actionB a img[src$="down.png"] {
   height: 30px;
 }
 section {
   min-height: 85vh;
-  width: 65%;
+  width: 888px;
   flex-grow: 1;
   background-color: #E6E7EF;
   display: flex;
@@ -99,7 +97,7 @@ section article {
   display: flex;
   flex-direction: column;
 }
-section article nav {
+section article .navSecond {
   background-color: white;
   width: 600px;
   height: 65px;
@@ -107,25 +105,26 @@ section article nav {
   display: flex;
   flex-shrink: 0;
 }
-section article nav #plus {
+section article .navSecond #plus {
   background-color: #E6E7EF;
   width: 90px;
   height: 100%;
   box-sizing: border-box;
 }
-section article nav #plus a {
+section article .navSecond #plus a {
   display: block;
   text-align: center;
   padding-top: 15px;
   height: 100%;
   box-sizing: border-box;
 }
-section article nav #ssylki {
+section article .navSecond #ssylki {
   flex-grow: 1;
   height: 100%;
   position: relative;
+  box-shadow: 2px 2px 5px #9A9A9A;
 }
-section article nav #ssylki::after {
+section article .navSecond #ssylki::after {
   content: "";
   position: absolute;
   top: 33%;
@@ -135,7 +134,7 @@ section article nav #ssylki::after {
   border-style: solid;
   border-color: transparent white transparent transparent;
 }
-section article nav #ssylki ul {
+section article .navSecond #ssylki ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -143,40 +142,40 @@ section article nav #ssylki ul {
   height: 65px;
   white-space: nowrap;
 }
-section article nav #ssylki ul li {
+section article .navSecond #ssylki ul li {
   display: inline-block;
   width: 24.4%;
   height: 100%;
   box-sizing: border-box;
 }
-section article nav #ssylki ul li #status {
+section article .navSecond #ssylki ul li #status {
   background-image: url(../img/menu-button2.png);
   background-position: 5% 50%;
   background-repeat: no-repeat;
   background-size: 18px;
 }
-section article nav #ssylki ul li #photos {
+section article .navSecond #ssylki ul li #photos {
   background-image: url(../img/images2.png);
   background-position: 5% 50%;
   background-repeat: no-repeat;
   background-size: 18px;
   border-left: 1px solid #9A9A9A;
 }
-section article nav #ssylki ul li #sound {
+section article .navSecond #ssylki ul li #sound {
   background-image: url(../img/quaver2.png);
   background-position: 5% 50%;
   background-repeat: no-repeat;
   background-size: 18px;
   border-left: 1px solid #9A9A9A;
 }
-section article nav #ssylki ul li #link {
+section article .navSecond #ssylki ul li #link {
   background-image: url(../img/clip2.png);
   background-position: 5% 50%;
   background-repeat: no-repeat;
   background-size: 18px;
   border-left: 1px solid #9A9A9A;
 }
-section article nav #ssylki ul li a {
+section article .navSecond #ssylki ul li a {
   text-decoration: none;
   color: black;
   display: block;
@@ -231,6 +230,7 @@ section article .contein .information {
   align-items: flex-start;
   box-sizing: border-box;
   background-color: white;
+  box-shadow: 2px 2px 5px #9A9A9A;
 }
 section article .contein .information .informationText {
   border-bottom: 1px solid #9A9A9A;
@@ -347,10 +347,11 @@ section article .contein .information .informationAction .informationActionComme
   height: 14px;
   border-radius: 20px;
   padding-left: 5px;
-  background-image: url(../img/pen2.png);
-  background-position: 98% 50%;
-  background-repeat: no-repeat;
-  background-size: 13px;
+  background-image: linear-gradient(to bottom, rgba(149, 149, 149, 0.3), rgba(255, 255, 255, 0.7)), url(../img/pen2.png);
+  background-position: 50% 50% ,98% 50%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%,13px;
+  border: 1px solid #9A9A9A;
 }
 section article .contein .information .informationAction .informationActionComment input:focus {
   background-image: none;
@@ -437,6 +438,7 @@ section aside .lurking .lurking-action {
   background-color: white;
   margin-top: 10px;
   padding-top: 10px;
+  box-shadow: 2px 2px 5px #9A9A9A;
 }
 section aside .lurking .lurking-action:first-child {
   margin-top: 0px;
@@ -478,12 +480,12 @@ section aside .status .status-action {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  box-shadow: 2px 2px 5px #9A9A9A;
 }
 section aside .status .status-action li {
   height: 25px;
   background-color: white;
   box-sizing: border-box;
-  line-height: 25px;
   font-size: 12px;
   display: flex;
   justify-content: space-between;
@@ -492,17 +494,22 @@ section aside .status .status-action li:hover {
   background-color: #E6E7EF;
   cursor: pointer;
 }
-section aside .status .status-action li img[src$=".jpg"] {
+section aside .status .status-action li .dop {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  overflow: hidden;
+}
+section aside .status .status-action li .dop img[src$=".jpg"] {
   height: 23px;
   border-radius: 10px;
-  margin: 2px 0 0 5px;
 }
-section aside .status .status-action li span.name {
-  width: 80px;
+section aside .status .status-action li .dop span.name {
+  margin-left: 5px;
+  line-height: 25px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: -45px;
 }
 section aside .status .status-action li span.current {
   width: 45px;
