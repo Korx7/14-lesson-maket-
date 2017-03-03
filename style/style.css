@@ -1,0 +1,575 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #E6E7EF;
+}
+nav {
+  width: 100%;
+  background-color: #3D5C9D;
+  height: 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .search {
+  background-color: #3D5C9D;
+  width: 320px;
+  height: 30px;
+  margin-left: 80px;
+  line-height: 30px;
+  text-align: center;
+  background-image: url(../img/facebook.png), url(../img/circle_green.png);
+  background-position: 0% 50%,100% 50%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 30px,10px;
+  flex-shrink: 0;
+}
+nav .search input {
+  width: 250px;
+  height: 18px;
+  border-radius: 20px;
+  padding-left: 5px;
+  background-image: url(../img/search.png);
+  background-position: 98% 50%;
+  background-repeat: no-repeat;
+  background-size: 13px;
+}
+nav .search input:focus {
+  background-image: none;
+  outline: none;
+}
+nav .action {
+  width: 200px;
+  height: 30px;
+  margin-right: 80px;
+  line-height: 30px;
+  flex-shrink: 0;
+  display: flex;
+}
+nav .action .actionA {
+  background-color: #3D5C9D;
+  height: 30px;
+  flex-grow: 1;
+  color: white;
+  text-align: center;
+}
+nav .action .actionB {
+  background-color: #3D5C9D;
+  height: 30px;
+  width: 100px;
+  flex-shrink: 0;
+  border-left: 1px solid #D4D4D4;
+  text-align: center;
+  line-height: 30px;
+}
+nav .action .actionB img[src$="1.jpg"] {
+  height: 30px;
+  border-radius: 10px;
+  margin: 0 10px 0 10px;
+}
+nav .action .actionB a {
+  display: inline-block;
+  height: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 1px #2B2B2B;
+}
+nav .action .actionB a:active {
+  box-shadow: 0px 3px 4px black;
+}
+nav .action .actionB a:hover {
+  cursor: pointer;
+}
+nav .action .actionB a img[src$="down.png"] {
+  height: 30px;
+}
+section {
+  min-height: 85vh;
+  width: 65%;
+  flex-grow: 1;
+  background-color: #E6E7EF;
+  display: flex;
+  margin: auto;
+}
+section article {
+  margin-top: 15px;
+  background-color: #E6E7EF;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+section article nav {
+  background-color: white;
+  width: 600px;
+  height: 65px;
+  margin: 0 30px 15px 0;
+  display: flex;
+  flex-shrink: 0;
+}
+section article nav #plus {
+  background-color: #E6E7EF;
+  width: 90px;
+  height: 100%;
+  box-sizing: border-box;
+}
+section article nav #plus a {
+  display: block;
+  text-align: center;
+  padding-top: 15px;
+  height: 100%;
+  box-sizing: border-box;
+}
+section article nav #ssylki {
+  flex-grow: 1;
+  height: 100%;
+  position: relative;
+}
+section article nav #ssylki::after {
+  content: "";
+  position: absolute;
+  top: 33%;
+  left: 0;
+  margin-left: -24px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+section article nav #ssylki ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 65px;
+  white-space: nowrap;
+}
+section article nav #ssylki ul li {
+  display: inline-block;
+  width: 24.4%;
+  height: 100%;
+  box-sizing: border-box;
+}
+section article nav #ssylki ul li #status {
+  background-image: url(../img/menu-button2.png);
+  background-position: 5% 50%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+}
+section article nav #ssylki ul li #photos {
+  background-image: url(../img/images2.png);
+  background-position: 5% 50%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  border-left: 1px solid #9A9A9A;
+}
+section article nav #ssylki ul li #sound {
+  background-image: url(../img/quaver2.png);
+  background-position: 5% 50%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  border-left: 1px solid #9A9A9A;
+}
+section article nav #ssylki ul li #link {
+  background-image: url(../img/clip2.png);
+  background-position: 5% 50%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  border-left: 1px solid #9A9A9A;
+}
+section article nav #ssylki ul li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+  height: 55px;
+  line-height: 55px;
+}
+section article .contein {
+  background-color: #E6E7EF;
+  width: 600px;
+  min-height: 65px;
+  margin-bottom: 15px;
+  display: flex;
+}
+section article .contein .personal {
+  background-color: #E6E7EF;
+  width: 90px;
+  height: 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+section article .contein .personal img[src$=".jpg"] {
+  height: 55px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  float: left;
+  margin: 0 18px 0 18px;
+}
+section article .contein .personal .personalNsme {
+  font-size: 13px;
+  margin-top: 10px;
+}
+section article .contein .personal .personalLurking {
+  font-size: 12px;
+  color: #9D9EA6;
+}
+section article .contein .personal .personalAction {
+  font-size: 13px;
+}
+section article .contein .personal .personalAction img {
+  height: 13px;
+}
+section article .contein .information {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  background-color: white;
+}
+section article .contein .information .informationText {
+  border-bottom: 1px solid #9A9A9A;
+  flex-grow: 1;
+  width: 95%;
+  margin: auto;
+  font-size: 13px;
+  position: relative;
+}
+section article .contein .information .informationText h3 {
+  margin: 10px 0 0px 0;
+}
+section article .contein .information .informationText p {
+  margin-top: 10px;
+}
+section article .contein .information .informationText::after {
+  content: "";
+  position: absolute;
+  top: 13%;
+  left: -2.5%;
+  margin-left: -24px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+section article .contein .information .informationText2 {
+  border-bottom: 1px solid #9A9A9A;
+  flex-grow: 1;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+section article .contein .information .informationText2::after {
+  content: "";
+  position: absolute;
+  top: 13%;
+  left: -2.5%;
+  margin-left: -24px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+section article .contein .information .informationText2 img {
+  width: 30%;
+  height: 90%;
+  margin: 10px 0 10px 0;
+}
+section article .contein .information .informationText2 img:nth-child(2) {
+  padding: 0 12px 0 12px;
+  border-left: 1px solid #9A9A9A;
+  border-right: 1px solid #9A9A9A;
+}
+section article .contein .information .informationText3 {
+  border-bottom: 1px solid #9A9A9A;
+  flex-grow: 1;
+  width: 95%;
+  padding: 10px 0 10px 0;
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  position: relative;
+}
+section article .contein .information .informationText3::after {
+  content: "";
+  position: absolute;
+  top: 16%;
+  left: -2.5%;
+  margin-left: -24px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+section article .contein .information .informationText3 .infaTextLevo {
+  flex-grow: 1;
+  font-size: 13px;
+}
+section article .contein .information .informationText3 .videoPravo {
+  width: 150px;
+  flex-shrink: 0;
+}
+section article .contein .information .informationText3 .videoPravo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section article .contein .information .informationText3 .videoPravo a img {
+  width: 150px;
+  height: 100% ;
+}
+section article .contein .information .informationAction {
+  margin: auto;
+  height: 40px;
+  width: 95%;
+  flex-shrink: 0;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+}
+section article .contein .information .informationAction .informationActionComment {
+  flex-grow: 1;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+section article .contein .information .informationAction .informationActionComment img[src$="1.jpg"] {
+  height: 20px;
+  border-radius: 10px;
+  margin: 0 10px 0 10px;
+}
+section article .contein .information .informationAction .informationActionComment input {
+  width: 310px;
+  height: 14px;
+  border-radius: 20px;
+  padding-left: 5px;
+  background-image: url(../img/pen2.png);
+  background-position: 98% 50%;
+  background-repeat: no-repeat;
+  background-size: 13px;
+}
+section article .contein .information .informationAction .informationActionComment input:focus {
+  background-image: none;
+  outline: none;
+}
+section article .contein .information .informationAction .informationActionMark {
+  width: 120px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+section article .contein .information .informationAction .informationActionMark ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 120px;
+  height: 30px;
+  white-space: nowrap;
+}
+section article .contein .information .informationAction .informationActionMark ul li {
+  display: inline-block;
+  height: 100%;
+  box-sizing: border-box;
+}
+section article .contein .information .informationAction .informationActionMark ul li .like {
+  background-image: url(../img/like.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+section article .contein .information .informationAction .informationActionMark ul li .like:hover {
+  box-shadow: 1px 1px 2px #9A9A9A;
+}
+section article .contein .information .informationAction .informationActionMark ul li .back {
+  background-image: url(../img/arrow.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  border-left: 1px solid #9A9A9A;
+}
+section article .contein .information .informationAction .informationActionMark ul li .back:hover {
+  box-shadow: 1px 1px 2px #9A9A9A;
+}
+section article .contein .information .informationAction .informationActionMark ul li .public {
+  background-image: url(../img/people.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  border-left: 1px solid #9A9A9A;
+}
+section article .contein .information .informationAction .informationActionMark ul li .public:hover {
+  box-shadow: 1px 1px 2px #9A9A9A;
+}
+section article .contein .information .informationAction .informationActionMark ul li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 40px;
+  height: 30px;
+  box-sizing: border-box;
+}
+section aside {
+  margin-top: 15px;
+  background-color: #E6E7EF;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-left: 1px solid #9A9A9A;
+}
+section aside .lurking {
+  width: 200px;
+  height: 285px;
+  background-color: #E6E7EF;
+  margin: 0px 15px 0 35px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #9A9A9A;
+}
+section aside .lurking .lurking-action {
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+section aside .lurking .lurking-action:first-child {
+  margin-top: 0px;
+}
+section aside .lurking .lurking-action img[src$=".jpg"] {
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  float: left;
+  margin: 0 10px 0 10px;
+}
+section aside .lurking .lurking-action .people {
+  font-size: 14px;
+  display: inline-block;
+  width: 100px;
+  margin-top: 5px;
+}
+section aside .lurking .lurking-action .people_action {
+  font-size: 12px;
+  color: #9D9EA6;
+  display: inline-block;
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 5px;
+}
+section aside .status {
+  width: 200px;
+  height: 285px;
+  background-color: #E6E7EF;
+  margin: 15px 15px 0 35px;
+  box-sizing: border-box;
+}
+section aside .status .status-action {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+section aside .status .status-action li {
+  height: 25px;
+  background-color: white;
+  box-sizing: border-box;
+  line-height: 25px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+section aside .status .status-action li:hover {
+  background-color: #E6E7EF;
+  cursor: pointer;
+}
+section aside .status .status-action li img[src$=".jpg"] {
+  height: 23px;
+  border-radius: 10px;
+  margin: 2px 0 0 5px;
+}
+section aside .status .status-action li span.name {
+  width: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: -45px;
+}
+section aside .status .status-action li span.current {
+  width: 45px;
+  visibility: hidden;
+  color: #9D9EA6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 5px;
+}
+section aside .status .status-action #f101 {
+  background-image: url(../img/circle_green.png);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+section aside .status .status-action #f102 {
+  background-image: url(../img/circle_green.png);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+section aside .status .status-action #f103 {
+  background-image: url(../img/circle_green.png);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+section aside .status .status-action #f104 {
+  background-image: url(../img/circle_green.png);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+section aside .status .status-action #f105 {
+  background-image: url(../img/circle_green.png);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+section aside .status .status-action #f106 span.current {
+  visibility: visible;
+}
+section aside .status .status-action #f107 {
+  background-image: url(../img/circle_red.png);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+section aside .status .status-action #f108 {
+  background-image: url(../img/circle_orange.png);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+section aside .status .status-action #f109 {
+  background-image: url(../img/circle_orange.png);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+section aside .status .status-action #f110 {
+  background-image: url(../img/circle_red.png);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+section aside .status .status-action #f111 span.current {
+  visibility: visible;
+}
